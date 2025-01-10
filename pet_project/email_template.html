@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Price Alert</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 40px 0 30px 0;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 40px 30px 40px 30px;
+        }
+        .content .stock-info {
+            color: #153643;
+            font-size: 24px;
+        }
+        .content .stock-info .symbol {
+            color: #4CAF50;
+        }
+        .content .stock-info .price {
+            color: #f44336;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #dddddd;
+            padding: 30px 30px;
+            font-size: 12px;
+            color: #153643;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+        <tr>
+            <td class="header">
+                <h1>Stock Price Alert</h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="content">
+                <p class="stock-info">
+                    <b>The price of <span class="symbol">{{STOCK_SYMBOL}}</span> is <span class="price">${{STOCK_PRICE}}</span>.</b>
+                </p>
+                <p>Stay informed about your favorite stocks with our real-time alerts.</p>
+                <a href="{{UNSUBSCRIBE_URL}}?apiKey={{UNSUBSCRIBE_API_KEY}}&ruleId={{RULE_ID}}" class="button">Unsubscribe for {{STOCK_SYMBOL}}</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="footer">
+                &copy; 2024 Stock Price Alerting. All rights reserved.
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
